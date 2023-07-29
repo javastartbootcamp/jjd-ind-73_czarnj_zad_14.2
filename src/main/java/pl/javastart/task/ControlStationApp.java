@@ -32,6 +32,7 @@ public class ControlStationApp {
                         System.out.println("Brak pojazdów w kolejce");
                     }
                 }
+                default -> System.out.println("Podaj opcję z menu");
             }
         }
     }
