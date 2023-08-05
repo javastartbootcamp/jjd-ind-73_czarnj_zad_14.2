@@ -23,7 +23,7 @@ public class FileOperator {
     public void saveVehicles(Queue<Vehicle> vehicles, String fileName) {
         try (var bw = new BufferedWriter(new FileWriter(fileName))) {
             while (vehicles.peek() != null) {
-                String vehicleWithoutWhiteSpaces = vehicles.poll().toString();
+                String vehicleWithoutWhiteSpaces = vehicles.poll().toCsv();
                 bw.write(vehicleWithoutWhiteSpaces + "\n");
             }
         } catch (IOException ex) {
@@ -32,7 +32,7 @@ public class FileOperator {
     }
 
     private Vehicle parseVehicle(String line) {
-        String[] splittedLine = line.split(" ");
+        String[] splittedLine = line.split(",");
         String type = splittedLine[0];
         String brand = splittedLine[1];
         String model = splittedLine[2];

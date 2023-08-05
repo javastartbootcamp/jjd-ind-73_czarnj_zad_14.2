@@ -16,15 +16,15 @@ public class ControlStationApp {
             int option = scanner.nextInt();
             scanner.nextLine();
             switch (option) {
-                case 0 -> {
+                case EXIT -> {
                     station.saveVehicles();
                     shouldContinue = false;
                 }
-                case 1 -> {
+                case ADD_CAR -> {
                     Vehicle vehicle = getVehicleFromUser();
                     station.addVehicle(vehicle);
                 }
-                case 2 -> {
+                case READ_CAR -> {
                     Vehicle vehicle = station.readNextVehicle();
                     if (vehicle != null) {
                         System.out.println("Pojazd do kontroli: " + vehicle);

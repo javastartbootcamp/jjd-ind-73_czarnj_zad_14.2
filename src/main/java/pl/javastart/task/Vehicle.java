@@ -21,4 +21,8 @@ public class Vehicle {
     public String toString() {
         return type + " " + brand + " " + model + " " + productionYear + " " + milage + " " + vin;
     }
+
+    public String toCsv() {
+        return type + "," + brand + "," + model + "," + productionYear + "," + milage + "," + vin;
+    }
 }
