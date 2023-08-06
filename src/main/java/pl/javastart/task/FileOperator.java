@@ -22,6 +22,9 @@ public class FileOperator {
 
     public void saveVehicles(Queue<Vehicle> vehicles, String fileName) {
         try (var bw = new BufferedWriter(new FileWriter(fileName))) {
+            if (vehicles.size() == 0) {
+                bw.write("\n");
+            }
             while (vehicles.peek() != null) {
                 String vehicleWithoutWhiteSpaces = vehicles.poll().toCsv();
                 bw.write(vehicleWithoutWhiteSpaces + "\n");

@@ -21,8 +21,6 @@ public class ControlStation {
     }
 
     public void saveVehicles() {
-        if (vehicles.size() > 0) {
-            operator.saveVehicles(vehicles, fileName);
-        }
+        operator.saveVehicles(vehicles, fileName);
     }
 }

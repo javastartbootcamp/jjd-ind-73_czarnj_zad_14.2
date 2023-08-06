@@ -39,9 +39,9 @@ public class ControlStationApp {
 
     private void showMenu() {
         System.out.println("Wybierz opcję:");
-        System.out.println("1 - dodaj pojazd do kolejki");
-        System.out.println("2 - zabierz kolejny pojazd na przegląd");
-        System.out.println("0 - zakończ program");
+        System.out.printf("%d - dodaj pojazd do kolejki%n", ADD_CAR);
+        System.out.printf("%d - zabierz kolejny pojazd na przegląd%n", READ_CAR);
+        System.out.printf("%d - zakończ program", EXIT);
     }
 
     private Vehicle getVehicleFromUser() {
